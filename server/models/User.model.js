@@ -10,7 +10,7 @@ const userSchema = new Schema(
       lowercase: true,
       trim: true,
     },
-    password: {
+    imagePassword: {
       type: String,
       required: [true, "Password is required."],
     },
@@ -18,6 +18,9 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Name is required."],
     },
+    UserAnswers: [{
+      type: mongoose.UserAnswers.ObjectId, ref: "UserAnswers"
+  }],
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
