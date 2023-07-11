@@ -19,7 +19,7 @@ const userSchema = new Schema(
       required: [true, "Name is required."],
     },
     UserAnswers: [{
-      type: mongoose.UserAnswers.ObjectId, ref: "UserAnswers"
+      type: Schema.Types.ObjectId, ref: "UserAnswers"
   }],
   },
   {
