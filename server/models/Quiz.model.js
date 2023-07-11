@@ -6,7 +6,7 @@ const quizSchema = new Schema(
           type: Number,
         },
         Questions: [{
-            type: mongoose.Questions.ObjectId, ref: "Questions"
+            type: Schema.Types.ObjectId, ref: "Questions"
         }],
         Category: {
             type: String,
