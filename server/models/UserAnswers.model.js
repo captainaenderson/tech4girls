@@ -9,14 +9,15 @@ const UserAnswersSchema = new Schema(
             type: String,
             required: true
         },
-        Quiz: {
-            type: Schema.Types.ObjectId, ref: "Quiz"
-        },
+    
+        User: [{
+            type: Schema.Types.ObjectId, ref: "User"
+        }],
       },
       
     
   );
   
-  const Question = model("Question", UserAnswersSchema);
+  const UserAnswers = model("UserAnswers", UserAnswersSchema);
   
-  module.exports = Question;
+  module.exports = UserAnswers;
