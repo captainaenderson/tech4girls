@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const questionSchema = new Schema(
+const UserAnswersSchema = new Schema(
     {
         Question: {
             type: Schema.Types.ObjectId, ref: "Question"
@@ -9,14 +9,15 @@ const questionSchema = new Schema(
             type: String,
             required: true
         },
-        Quiz: {
-            type: Schema.Types.ObjectId, ref: "Quiz"
-        },
+    
+        User: [{
+            type: Schema.Types.ObjectId, ref: "User"
+        }],
       },
       
     
   );
   
-  const Question = model("Question", questionSchema);
+  const UserAnswers = model("UserAnswers", UserAnswersSchema);
   
-  module.exports = Question;
+  module.exports = UserAnswers;

@@ -10,7 +10,7 @@ const userSchema = new Schema(
       lowercase: true,
       trim: true,
     },
-    imagePassword: {
+    password: {
       type: String,
       required: [true, "Password is required."],
     },
@@ -18,9 +18,9 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Name is required."],
     },
-    UserAnswers: [{
-      type: Schema.Types.ObjectId, ref: "UserAnswers"
-  }],
+    profile:{
+      type: Schema.Types.ObjectId, ref: "Profile"
+    }
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`

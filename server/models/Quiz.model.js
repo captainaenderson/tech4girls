@@ -10,7 +10,7 @@ const quizSchema = new Schema(
         }],
         Category: {
             type: String,
-            enum: ['HTML', 'CSS', '', '']
+            enum: ['HTML', 'CSS', 'Codingspiele 1', 'Codingspiele 2']
         }
       },
       
