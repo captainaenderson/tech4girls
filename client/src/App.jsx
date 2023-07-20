@@ -5,10 +5,12 @@ import HomePage from "./pages/HomePage/HomePage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import CreateProfilePage from "./pages/CreateProfile";
 
 import Navbar from "./components/Navbar/Navbar";
 import IsPrivate from "./components/IsPrivate/IsPrivate";
 import IsAnon from "./components/IsAnon/IsAnon";
+
 
 function App() {
   return (
@@ -17,6 +19,17 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+
+       {/* Create-Profile Page */}
+
+       <Route
+          path="/create-profile/:id"
+          element={
+            <IsAnon>
+              <CreateProfilePage />
+            </IsAnon>
+          }
+        />
 
         <Route
           path="/profile"

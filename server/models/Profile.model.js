@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const ProfileSchema = new Schema(
+const profileSchema = new Schema(
     {
         User: {
             type: Schema.Types.ObjectId, ref: "User",
@@ -28,6 +28,6 @@ const ProfileSchema = new Schema(
     
   );
   
-  const Profile = model("Profile", ProfileSchema);
+  const Profile = model("Profile", profileSchema);
   
   module.exports = Profile;
