@@ -35,8 +35,9 @@ function SignupPage() {
     authService
       .signup(requestBody)
       .then((response) => {
-        // If the POST request is successful redirect to the login page
-        navigate("/login");
+        console.log(response);
+        // If the POST request is successful redirect to the create profile page
+        navigate(`/create-profile/${response.data.user._id}`);
       })
       .catch((error) => {
         // If the request resolves with an error, set the error message in the state
