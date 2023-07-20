@@ -12,7 +12,7 @@ router.post("/create-profile", async (req, res) => {
       console.log(req.body);
       const profile = await Profile.create(req.body);
    
-      // const newUser = await User.findByIdAndUpdate(req.body.User, {profile: profile._id})
+      const newUser = await User.findByIdAndUpdate(req.body.User, {profile: profile._id})
       res.status(201).json(profile);
     } catch (error) {
 
