@@ -9,6 +9,7 @@ const jwt = require("jsonwebtoken");
 
 // Require the User model in order to interact with the database
 const User = require("../models/User.model");
+const Profile = require("../models/Profile.model")
 
 // Require necessary (isAuthenticated) middleware in order to control access to specific routes
 const { isAuthenticated } = require("../middleware/jwt.middleware.js");
@@ -64,6 +65,7 @@ router.post("/signup", (req, res, next) => {
       // Deconstruct the newly created user object to omit the password
       // We should never expose passwords publicly
       const { email, name, _id } = createdUser;
+      // Profile.create({User: _id, JoinedClass: false })
 
       // Create a new object that doesn't expose the password
       const user = { email, name, _id };

@@ -9,7 +9,7 @@ const profileSchema = new Schema(
 
         ProfilePicture: {
             type: String,
-            required: true
+            // required: true
         },
         JoinedClass: {
             type: Boolean,

@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
-import { useContext } from "react";
-import { AuthContext } from "../context/auth.context";
+import { useContext } from 'react';
+import { AuthContext } from '../context/auth.context';
+
+
+
 
 function CreateProfilePage() {
 
+  const {id} = useParams()
+
   const { user } = useContext(AuthContext);
   console.log(user);
+
+  
 
   // State-Hooks verwenden, um das Formular zu verwalten
   const [form, setForm] = useState({
@@ -17,6 +25,8 @@ function CreateProfilePage() {
   });
 
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+
+  
 
   // Handler-Funktion, um das ausgewählte Profilbild im Formularzustand zu speichern
   const handleImageClick = (index) => {
@@ -34,6 +44,8 @@ function CreateProfilePage() {
     "https://res.cloudinary.com/dfq746dyv/image/upload/v1689873183/Bildschirmfoto_2022-06-19_um_16.11_1_ldgy2n.png"
   ];
 
+
+  
   // Handler-Funktion, um die JoinedClass-Auswahl im Formularzustand zu speichern
   const handleJoinedClassChange = (value) => {
     setForm((prevForm) => ({
@@ -53,13 +65,19 @@ function CreateProfilePage() {
     }));
   };
 
+  const navigate = useNavigate();
+
   // Handler-Funktion für das Formular-Submit-Ereignis
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/profile/create-profile`, form);
+    const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api/profile/create-profile/${id}`, form);
     console.log('Profile created:', response.data);
+
     // Weiterleitung zur Quiz-Seite
+    //navigate(`/quiz-startpage/${response.data._id}`);
+    navigate(`/quiz-startpage/${id}`);
+
   } catch (error) {
     console.error('Failed to create profile:', error.message);
   }

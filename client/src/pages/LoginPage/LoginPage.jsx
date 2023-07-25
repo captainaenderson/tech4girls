@@ -11,7 +11,7 @@ function LoginPage() {
 
   const navigate = useNavigate();
 
-  const { storeToken, authenticateUser } = useContext(AuthContext);
+  const { storeToken, authenticateUser, user } = useContext(AuthContext);
 
   const handleEmail = (e) => setEmail(e.target.value);
   const handlePassword = (e) => setPassword(e.target.value);
@@ -35,7 +35,7 @@ function LoginPage() {
         // and at last navigate to the home page
         storeToken(response.data.authToken);
         authenticateUser();
-        navigate("/");
+        // navigate(`/quiz-startpage/${response.data.user._id}`);
       })
       .catch((error) => {
         // If the request resolves with an error, set the error message in the state
