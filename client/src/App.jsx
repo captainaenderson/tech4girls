@@ -6,6 +6,7 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import CreateProfilePage from "./pages/CreateProfile";
+import QuizStartPage from "./pages/QuizStartPage";
 
 import Navbar from "./components/Navbar/Navbar";
 import IsPrivate from "./components/IsPrivate/IsPrivate";
@@ -27,6 +28,17 @@ function App() {
           element={
             <IsAnon>
               <CreateProfilePage />
+            </IsAnon>
+          }
+        />
+
+        {/* Quiz-Start Page */}
+
+        <Route
+          path="/quiz-startpage/:id"
+          element={
+            <IsAnon>
+              <QuizStartPage />
             </IsAnon>
           }
         />

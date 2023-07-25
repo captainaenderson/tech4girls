@@ -1,0 +1,100 @@
+[
+    
+    {
+        
+        "Question": "Wofür steht Algorithmus?",
+        "Answers": [
+          {
+            "AnswerText": "Schritt-für-Schritt Anweisungen, um ein Problem zu lösen.",
+            "CorrectAnswer": true,
+            "IsChosen": false
+          },
+          {
+            "AnswerText": "Schritt-für-Schritt Anweisungen, um ein Problem zu erstellen.",
+            "CorrectAnswer": false,
+            "IsChosen": false
+          },
+          {
+            "AnswerText": "Ein Algorithmus ist eine Abfolge von Tönen.",
+            "CorrectAnswer": false,
+            "IsChosen": false
+          }
+        ],
+        "Category": "Codingspiele 1",
+        "SubCategory": "Algorithmus",
+        "StepNumber": 1
+      },
+
+      {
+        "Question": "Was bedeutet move forward?",
+        "Answers": [
+          {
+            "AnswerText": " laufe vorwärts",
+            "CorrectAnswer": true,
+            "IsChosen": false
+          },
+          {
+            "AnswerText": "drehe nach rechts",
+            "CorrectAnswer": false,
+            "IsChosen": false
+          },
+          {
+            "AnswerText": "drehe nach links",
+            "CorrectAnswer": false,
+            "IsChosen": false
+          }
+        ],
+        "Category": "Codingspiele 1",
+        "SubCategory": "Internet Basics",
+        "StepNumber": 2
+      },
+
+      {
+        "Question": "Was ist ein Browser?",
+        "Answers": [
+          {
+            "AnswerText": "mit Hilfe eines Browsers kann man Websites im Internet finden und sie sich angucken.",
+            "CorrectAnswer": true,
+            "IsChosen": false
+          },
+          {
+            "AnswerText": "ein Browser kann Bilder zu Wörtern generieren",
+            "CorrectAnswer": false,
+            "IsChosen": false
+          },
+          {
+            "AnswerText": "ein Browser zeigt dir an welche Fehler du im Code hast",
+            "CorrectAnswer": false,
+            "IsChosen": false
+          }
+        ],
+        "Category": "HTML",
+        "SubCategory": "Website",
+        "StepNumber": 1
+      },
+
+      {
+        "Question": "Was ist ein Tab?",
+        "Answers": [
+          {
+            "AnswerText": " HTML",
+            "CorrectAnswer": false,
+            "IsChosen": false
+          },
+          {
+            "AnswerText": "Adresse der Website ein, die man sucht",
+            "CorrectAnswer": false,
+            "IsChosen": false
+          },
+          {
+            "AnswerText": "Jede Seite, die man öffnet, hat einen eigenen Tab. Ich kann eine weitere Seite öffnen, indem ich hier auf das Pluszeichen gehe. Man kann also mehrere Seiten gleichzeitig offen haben und zwischen den einzelnen Seiten hin- und her- wechseln. Dafür muss man oben einfach auf die Tabs klicken.",
+            "CorrectAnswer": true,
+            "IsChosen": false
+          }
+        ],
+        "Category": "HTML",
+        "SubCategory": "Website",
+        "StepNumber": 2
+      }
+      
+]
