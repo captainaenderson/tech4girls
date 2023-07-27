@@ -1,15 +1,13 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-
-
 
 function QuizStartPage() {
   const [profile, setProfile] = useState(null);
   const { id } = useParams();
+
   useEffect(() => {
-    
     axios.get(`${process.env.REACT_APP_SERVER_URL}/api/profile/profile/${id}`)
       .then((response) => {
         setProfile(response.data);
@@ -17,7 +15,7 @@ function QuizStartPage() {
       .catch((error) => {
         console.error('Fehler beim Abrufen des Profils', error);
       });
-  }, []);
+  }, [id]);
 
   if (!profile) {
     return <div>Ich sehe gar kein Profil</div>;
@@ -33,12 +31,12 @@ function QuizStartPage() {
           <div>
             <h2>Auswahlmöglichkeiten</h2>
             <div>
-            <p>HTML</p>
-            <button>Zum Quiz</button>
+              <p>HTML</p>
+              <Link to={`/questions/HTML`}><button>Zum Quiz</button></Link>
             </div>
             <div>
-            <p>CSS</p>
-            <button>Zum Quiz</button>
+              <p>CSS</p>
+              <Link to={`/questions/CSS`}><button>Zum Quiz</button></Link>
             </div>
           </div>
         );
@@ -47,18 +45,17 @@ function QuizStartPage() {
           <div>
             <h2>Auswahlmöglichkeiten</h2>
             <div>
-            <p>CSS</p>
-            <button>Zum Quiz</button>
+              <p>CSS</p>
+              <Link to={`/questions/CSS`}><button>Zum Quiz</button></Link>
             </div>
             <div>
-            <p>Codingspiele 1</p>
-            <button>Zum Quiz</button>
+              <p>Codingspiele 1</p>
+              <Link to={`/questions/Codingspiele 1`}><button>Zum Quiz</button></Link>
             </div>
           </div>
         );
       }
     }
-
     return null;
   };
 

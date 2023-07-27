@@ -7,6 +7,7 @@ import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import CreateProfilePage from "./pages/CreateProfile";
 import QuizStartPage from "./pages/QuizStartPage";
+import QuizPage from "./pages/QuizPage";
 
 import Navbar from "./components/Navbar/Navbar";
 import IsPrivate from "./components/IsPrivate/IsPrivate";
@@ -39,6 +40,17 @@ function App() {
           element={
             <IsAnon>
               <QuizStartPage />
+            </IsAnon>
+          }
+        />
+
+        {/* Quiz Page */}
+
+        <Route
+          path="/questions/:category"
+          element={
+            <IsAnon>
+              <QuizPage />
             </IsAnon>
           }
         />
